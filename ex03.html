@@ -16,13 +16,13 @@
     function sumOfListPrime(x){
         for(let i = 0;i<=x;i++){
             if(i>=2){
-                let flag = true;
+                let isPrime = true;
                 for(let j = 2;j<=Math.sqrt(i);j++){
-                    if(i%j == 0){
-                        flag = false;
+                    if(i%j === 0){
+                        isPrime = false;
                     }
                 }
-                if(flag){
+                if(isPrime){
                     console.log(i);
                     sum += i;
                 }

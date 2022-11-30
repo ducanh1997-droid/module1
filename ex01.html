@@ -13,13 +13,14 @@
 <script>
     let score = [2,5];
     let total = 0;
+    let average;
     function findAvg(score){
         for(let i=0;i<score.length;i++){
             total +=score[i];
         }
-        return total/score.length;
+        average = total/score.length;
+        return average;
     }
-
     console.log(findAvg(score));
 </script>
 </html>
