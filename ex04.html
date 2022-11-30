@@ -13,32 +13,24 @@
 </body>
 <script>
     class Rectangle {
-        constructor(x,y,width,height) {
+        constructor(x,y,width,height,color) {
             this.x = x;
             this.y = y;
             this.width = width;
             this.height = height;
+            this.color = color;
         }
-        setWidth (width){
-            this.width = width;
-        }
-        setHeight (height){
-            this.height = height;
+        render(){
+            let ctx = document.getElementById("myCanvas").getContext('2d');
+            ctx.beginPath();
+            ctx.rect(rectangle.x,rectangle.y, rectangle.width, rectangle.height);
+            console.log(rectangle.x);
+            ctx.fillStyle = rectangle.color;
+            ctx.fill();
         }
     }
+    let rectangle = new Rectangle(10,10,150,100,"#000");
+    rectangle.render();
 
-    function createRectangle(){
-        let ctx = document.getElementById("myCanvas").getContext('2d');
-        let rectangle = new Rectangle(10,10,150,100);
-        rectangle.setWidth(300);
-        rectangle.setHeight(200);
-        ctx.beginPath();
-        ctx.rect(rectangle.x,rectangle.y, rectangle.width, rectangle.height);
-        console.log(rectangle.x);
-        ctx.fillStyle = "red";
-        ctx.fill();
-        ctx.stroke();
-    }
-    createRectangle();
 </script>
 </html>
