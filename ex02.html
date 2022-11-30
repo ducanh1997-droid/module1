@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài 2</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arrInt = [2,3,4,51,2,3,41];
+    let x = 10;
+    let index = 1;
+    function insertNumberToArray(arrInt,x,index){
+        if(index<0 || index>arrInt.length){
+            return arrInt;
+        }else{
+            arrInt.splice(index,0,10);
+            return arrInt;
+        }
+    }
+
+    console.log(insertNumberToArray(arrInt,x,index));
+</script>
+</html>
